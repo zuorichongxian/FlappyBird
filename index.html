@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        canvas{
+            display: block;
+            margin: 0 auto;
+            background-color: skyblue;
+        }
+        
+    </style>
+    
+</head>
+<body>
+
+<canvas id="canvas" width="900" height="600" style="border: 1px solid #000;"></canvas>
+
+<script src="js/simple-Inheritance.js"></script>
+<script src="js/Game.js"></script>
+<script src="js/underscore-min.js"></script>
+<script src="js/FrameUtil.js"></script>
+<script src="js/StaticSourceUtil.js"></script>
+<script src="js/Background.js"></script>
+<script src="js/Pipe.js"></script>
+<script src="js/Bird.js"></script>
+<script>
+
+    //实例化中介者
+    var game = new Game({
+        fps:60,
+        canvasId:'canvas'
+    });
+    //运行游戏
+    //game.run();
+    //调整画布的宽和高
+    game.canvas.width = window.innerWidth;
+    game.canvas.height = window.innerHeight;
+
+
+</script>
+
+</body>
+</html>
